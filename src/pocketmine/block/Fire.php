@@ -121,9 +121,9 @@ class Fire extends Flowable{
 			$this->level->setBlock($this, $result);
 		}
 
-		if($canSpread){
-			$this->level->scheduleDelayedBlockUpdate($this, mt_rand(30, 40));
+		$this->level->scheduleDelayedBlockUpdate($this, mt_rand(30, 40));
 
+		if($canSpread){
 			$this->burnBlocksAround();
 			$this->spreadFire();
 		}
